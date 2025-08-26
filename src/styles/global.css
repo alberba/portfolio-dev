@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.title-section {
+  @apply text-center text-3xl font-semibold;
+}
