@@ -1,0 +1,47 @@
+---
+const projects = [
+  {
+    title: "MallorkCultura",
+    url: "https://github.com/alberba/MallorkCultura",
+    imageUrl: "/public/mallorkcultura.webp",
+    description:
+      "Una plataforma para descubrir y planificar actividades culturales en Mallorca. " +
+      "Desarrollada con HTML, CSS y Javascript durante el transcurso de la carrera universitaria.",
+  },
+  {
+    title: "Flux ComfyUI UI",
+    url: "https://github.com/alberba/astro-flux-comfyui",
+    imageUrl: "/public/fluxcomfyui.webp",
+    description:
+      "Una plataforma para poder gestionar flujos de trabajo de comfyui con una interfaz sencilla y moderna." +
+      "Proyecto realizado con Astro, TailwindCSS y Typescript para el desarrollo del TFG. Página web no funcional.",
+  },
+];
+---
+
+<section class="flex flex-col gap-6">
+  <h3 class="title-section">Proyectos</h3>
+  <ul class="flex flex-wrap justify-center gap-8">
+    {
+      projects.map((project) => {
+        return (
+          <li class="w-2/7 overflow-hidden rounded-2xl border">
+            <a href={project.url} class="flex flex-col">
+              <img
+                class="h-42 object-cover object-top"
+                src={project.imageUrl}
+                alt={project.title}
+              />
+              <div class="flex flex-col gap-2 px-6 py-4">
+                <header>
+                  <h4 class="text-xl font-semibold">{project.title}</h4>
+                </header>
+                <p>{project.description}</p>
+              </div>
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
