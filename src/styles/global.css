@@ -3,3 +3,19 @@
 .title-section {
   @apply text-center text-4xl font-semibold;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-text-primary;
+}
+
+@theme {
+  --color-accent: #2684ff;
+  --color-primary: #16161a;
+  --color-text-primary: #fffffe;
+  --color-text-secondary: #94a1b2;
+}
