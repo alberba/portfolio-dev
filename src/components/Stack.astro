@@ -5,37 +5,51 @@ const images = [
   {
     src: "/techs/astro-icon-light.svg",
     alt: "Astro Logo",
+    name: "Astro",
+    color: "255 255 255",
   },
   {
     src: "/techs/java.svg",
     alt: "Java Logo",
+    name: "Java",
+    color: "83 130 161",
   },
   {
     src: "/techs/python.svg",
     alt: "Python Logo",
+    name: "Python",
+    color: "255 212 59",
   },
   {
     src: "/techs/javascript.svg",
     alt: "JavaScript Logo",
+    name: "JavaScript",
+    color: "240 219 79",
   },
   {
     src: "/techs/typescript.svg",
     alt: "TypeScript Logo",
+    name: "TypeScript",
+    color: "49 120 198",
   },
   {
     src: "/techs/vue.svg",
     alt: "Vue Logo",
+    name: "Vue.js",
+    color: "65 184 131",
   },
   {
     src: "/techs/tailwind.svg",
     alt: "Tailwind Logo",
+    name: "Tailwind",
+    color: "56 189 248",
   },
 ];
 ---
 
-<section id="tech-section" class="mb-12 flex flex-col gap-6">
+<section id="tech-section" class="flex flex-col gap-6">
   <h3 class="title-section">Stack</h3>
-  <div class="mx-auto flex flex-wrap justify-center gap-4">
-    {images.map((image) => <TechCard image={image.src} alt={image.alt} />)}
+  <div class="mx-auto my-6 flex flex-wrap justify-center gap-6">
+    {images.map((image) => <TechCard image={image} />)}
   </div>
 </section>

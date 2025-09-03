@@ -1,5 +1,19 @@
 ---
-const { image, alt } = Astro.props;
+const { image } = Astro.props;
+const { src, alt, name, color } = image;
 ---
 
-<img src={image} alt={alt} class="h-10 aspect-square object-center" />
+<div class="group relative">
+  <span
+    class="absolute -top-8 left-1/2 -translate-x-1/2 rounded-xl border px-4 py-1 text-center opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-top-10"
+    style= `color: rgb(${color}); border-color: rgb(${color} / 0.4); background-color: rgb(${color} / 0.1);`
+  >
+    {name}
+  </span>
+  <img
+    src={src}
+    alt={alt}
+    class=`border-card-border aspect-square h-16 rounded-xl border object-center p-3 transition-all duration-400 hover:p-2.5`
+    style=`background: radial-gradient(circle 80px, rgb(${color} / 0.3) 0%, transparent 100%); border-color: rgb(${color} / 0.4);`
+  />
+</div>
