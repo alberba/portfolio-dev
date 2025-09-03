@@ -13,7 +13,7 @@ const projects = [
     url: "https://github.com/alberba/astro-flux-comfyui",
     imageUrl: "/fluxcomfyui.webp",
     description:
-      "Una plataforma para poder gestionar flujos de trabajo de comfyui con una interfaz sencilla y moderna." +
+      "Una plataforma para poder gestionar flujos de trabajo de comfyui con una interfaz sencilla y moderna. " +
       "Proyecto realizado con Astro, TailwindCSS y Typescript para el desarrollo del TFG. Página web no funcional.",
   },
 ];
@@ -25,7 +25,7 @@ const projects = [
     {
       projects.map((project) => {
         return (
-          <li class="w-2/7 overflow-hidden rounded-2xl border">
+          <li class="border-card-border bg-card-background w-2/7 overflow-hidden rounded-2xl border">
             <a href={project.url} class="flex flex-col">
               <img
                 class="h-42 object-cover object-top"
@@ -34,7 +34,9 @@ const projects = [
               />
               <div class="flex flex-col gap-2 px-6 py-4">
                 <header>
-                  <h4 class="text-xl font-semibold">{project.title}</h4>
+                  <h4 class="text-text-primary text-xl font-semibold">
+                    {project.title}
+                  </h4>
                 </header>
                 <p>{project.description}</p>
               </div>

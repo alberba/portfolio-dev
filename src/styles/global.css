@@ -6,16 +6,22 @@
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   @apply text-text-primary;
 }
 
+strong {
+  @apply text-accent;
+}
+
 @theme {
-  --color-accent: #2684ff;
+  --color-accent: rgb(239 159 11);
+  --color-accent-20: rgb(239 159 11 / 0.20);
+  --color-accent-10: rgb(239 159 11 / 0.10);
+  --color-accent-5: rgb(239 159 11 / 0.05);
   --color-primary: #16161a;
   --color-text-primary: #fffffe;
   --color-text-secondary: #94a1b2;
+  --color-card-background: #72757e18;
+  --color-card-border: #ffffff20;
 }
