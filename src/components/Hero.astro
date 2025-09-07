@@ -4,23 +4,29 @@ import Github from "./logosLink/Github.astro";
 import Linkedin from "./logosLink/Linkedin.astro";
 ---
 
-<section class="m-0 my-24 flex items-center justify-center gap-12">
+<section
+  class="m-0 my-12 md:my-24 flex flex-col items-center justify-center gap-12 md:flex-row"
+>
   <img class="h-52 rounded-full" src="/me.webp" alt="Foto de Albert Salom" />
   <div class="flex max-w-md flex-col gap-4">
     <header>
-      <h2 class="text-6xl font-bold">Albert Salom</h2>
-      <h3 class="text-4xl font-semibold">Software Developer</h3>
+      <h2 class="text-center text-4xl font-bold md:text-left md:text-6xl">
+        Albert Salom
+      </h2>
+      <h3 class="text-center text-3xl font-semibold md:text-left md:text-4xl">
+        Software Developer
+      </h3>
     </header>
-    <p>
-      Desarrollador <strong class="text-accent">Full-Stack</strong>.
-      Construyo interfaces limpias y APIs sencillas y mantenibles
+    <p class="text-center md:my-0 my-4 md:text-left">
+      Desarrollador <strong class="text-accent">Full-Stack</strong>. Construyo
+      interfaces limpias y APIs sencillas y mantenibles
     </p>
 
-    <nav class="flex items-center gap-8">
+    <nav class="flex md:flex-row flex-col items-center gap-8">
       <a
         href="/CVAlbertSalom.pdf"
         target="_blank"
-        class="bg-accent flex items-center gap-3 rounded-xl px-6 py-2 text-lg font-semibold text-text-primary"
+        class="bg-accent text-text-primary flex items-center gap-3 rounded-xl px-6 py-2 text-lg font-semibold"
       >
         <img class="h-6" src="/download.svg" alt="Icono de descarga" />
         Descargar CV
