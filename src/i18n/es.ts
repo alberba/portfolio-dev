@@ -27,7 +27,7 @@ export default {
       mallorkcultura: {
         title: "Mallorkcultura",
         url: "https://github.com/alberba/MallorkCultura",
-        imageUrl: "/mallorkcultura.webp",
+        imageUrl: "/projects/mallorkcultura.webp",
         description: `Una plataforma para descubrir y planificar actividades culturales en Mallorca. 
         Desarrollada con HTML, CSS y Javascript durante el transcurso de la carrera 
         universitaria.`,
@@ -35,7 +35,7 @@ export default {
       fluxComfyUI: {
         title: "Flux ComfyUI UI",
         url: "https://github.com/alberba/astro-flux-comfyui",
-        imageUrl: "/fluxcomfyui.webp",
+        imageUrl: "/projects/fluxcomfyui.webp",
         description: `Una plataforma para poder gestionar flujos de trabajo de comfyui con una interfaz
         sencilla y moderna. Proyecto realizado con Astro, TailwindCSS y Typescript para el
         desarrollo del TFG. Página web no funcional.`,

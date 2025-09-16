@@ -28,14 +28,14 @@ export default {
       mallorkcultura: {
         title: "Mallorkcultura",
         url: "https://github.com/alberba/MallorkCultura",
-        imageUrl: "/mallorkcultura.webp",
+        imageUrl: "/projects/mallorkcultura.webp",
         description: `A platform to discover and plan cultural activities in Mallorca. 
         Developed with HTML, CSS, and JavaScript during my university studies.`,
       },
       fluxComfyUI: {
         title: "Flux ComfyUI UI",
         url: "https://github.com/alberba/astro-flux-comfyui",
-        imageUrl: "/fluxcomfyui.webp",
+        imageUrl: "/projects/fluxcomfyui.webp",
         description: `A platform to manage ComfyUI workflows through a clean and modern interface. 
         Built with Astro, TailwindCSS, and TypeScript as part of my Final Degree Project (TFG). 
         Non-functional demo website.`,
