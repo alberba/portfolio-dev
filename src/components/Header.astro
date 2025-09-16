@@ -2,10 +2,26 @@
 const { t } = Astro.props;
 ---
 
-<header class="text-text-primary flex justify-center p-4">
+<header class="text-text-primary flex items-center justify-center p-4">
   <nav class="flex gap-8 text-xl font-medium md:gap-12">
     <a href="#about-me">{t.about.title}</a>
     <a href="#tech-section">Stack</a>
     <a href="#projects-section">{t.projects.title}</a>
   </nav>
+  <div class="absolute right-8 flex gap-3">
+    <a href="/">
+      <img
+        class="h-8 rounded-full border-2 border-transparent p-0.5 hover:border-white"
+        src="/lang/es.svg"
+        alt="Cambiar a español"
+      />
+    </a>
+    <a href="/en">
+      <img
+        class="h-8 rounded-full border-2 border-transparent p-0.5 hover:border-white"
+        src="/lang/en.svg"
+        alt="Change to English"
+      />
+    </a>
+  </div>
 </header>

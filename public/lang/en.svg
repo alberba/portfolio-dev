@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" aria-hidden="true" class="iconify iconify--emojione" viewBox="0 0 64 64">
+  <g fill="none">
+    <path fill="#fff" d="M38 2.6H26A30 30 0 0 0 2.6 26v12A30 30 0 0 0 26 61.4h12A30 30 0 0 0 61.4 38V26A30 30 0 0 0 38 2.6z"/>
+    <path fill="#CE1124" d="M61.2 39a30 30 0 0 0 .8-7 30 30 0 0 0-.8-7H39V2.8a30 30 0 0 0-7-.8 30 30 0 0 0-7 .8V25H2.8a30 30 0 0 0-.8 7c0 2.4.3 4.8.8 7H25v22.2a30 30 0 0 0 7 .8 30 30 0 0 0 7-.8V39h22.2z"/>
+  </g>
+</svg>
