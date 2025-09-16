@@ -1,7 +1,7 @@
 ---
-const { classList } = Astro.props;
+const { classList, altText } = Astro.props;
 ---
 
 <a href="https://www.linkedin.com/in/albertsalomvanrell/" target="_blank">
-  <img class={classList} src="/linkedin-logo.webp" alt="Perfil de Linkedin" />
+  <img class={classList} src="/linkedin-logo.webp" alt={altText} />
 </a>

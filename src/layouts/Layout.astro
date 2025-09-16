@@ -1,9 +1,17 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Stack from "../components/Stack.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+
+const { t, lang } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -12,7 +20,16 @@ import "../styles/global.css";
     <title>alberba - Portfolio Dev</title>
   </head>
   <body>
-    <slot />
+    <Header t={t} />
+    <main
+      class="mx-6 flex max-w-4xl flex-1 flex-col gap-12 py-8 sm:mx-8 md:mx-16 md:gap-16 lg:mx-auto"
+    >
+      <Hero t={t.hero} />
+      <About t={t.about} />
+      <Stack />
+      <Projects t={t.projects} />
+      <Contact t={t.contact} />
+    </main>
   </body>
 </html>
 

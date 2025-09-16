@@ -1,7 +1,11 @@
+---
+const { t } = Astro.props;
+---
+
 <header class="text-text-primary flex justify-center p-4">
   <nav class="flex gap-8 text-xl font-medium md:gap-12">
-    <a href="#about-me">Sobre mí</a>
+    <a href="#about-me">{t.about.title}</a>
     <a href="#tech-section">Stack</a>
-    <a href="#projects-section">Proyectos</a>
+    <a href="#projects-section">{t.projects.title}</a>
   </nav>
 </header>

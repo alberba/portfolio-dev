@@ -1,26 +1,7 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
-import Stack from "../components/Stack.astro";
-import Projects from "../components/Projects.astro";
-import Contact from "../components/Contact.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import es from "../i18n/es";
+const t = es;
 ---
 
-<Layout>
-  <Header />
-  <main
-    class="mx-6 sm:mx-8 md:mx-16 flex max-w-4xl flex-1 flex-col gap-12 py-8 lg:mx-auto md:gap-16"
-  >
-    <Hero />
-    <About />
-    <Stack />
-    <Projects />
-    <Contact />
-  </main>
-</Layout>
+<Layout t={t} lang="es" />

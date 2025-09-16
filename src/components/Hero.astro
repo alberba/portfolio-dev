@@ -2,12 +2,14 @@
 import Email from "./logosLink/Email.astro";
 import Github from "./logosLink/Github.astro";
 import Linkedin from "./logosLink/Linkedin.astro";
+
+const { t } = Astro.props;
 ---
 
 <section
-  class="m-0 my-12 md:my-24 flex flex-col items-center justify-center gap-12 md:flex-row"
+  class="m-0 my-12 flex flex-col items-center justify-center gap-12 md:my-24 md:flex-row"
 >
-  <img class="h-52 rounded-full" src="/me.webp" alt="Foto de Albert Salom" />
+  <img class="h-52 rounded-full" src="/me.webp" alt={t.alt.photo} />
   <div class="flex max-w-md flex-col gap-4">
     <header>
       <h2 class="text-center text-4xl font-bold md:text-left md:text-6xl">
@@ -17,24 +19,25 @@ import Linkedin from "./logosLink/Linkedin.astro";
         Software Developer
       </h3>
     </header>
-    <p class="text-center md:my-0 my-4 md:text-left">
-      Desarrollador <strong class="text-accent">Full-Stack</strong>. Construyo
-      interfaces limpias y APIs sencillas y mantenibles
+    <p class="my-4 text-center md:my-0 md:text-left">
+      {t.description.before}<strong class="text-accent">
+        {t.description.highlight}
+      </strong>{t.description.after}
     </p>
 
-    <nav class="flex md:flex-row flex-col items-center gap-8">
+    <nav class="flex flex-col items-center gap-8 md:flex-row">
       <a
         href="/CVAlbertSalom.pdf"
         target="_blank"
         class="bg-accent text-text-primary flex items-center gap-3 rounded-xl px-6 py-2 text-lg font-semibold"
       >
-        <img class="h-6" src="/download.svg" alt="Icono de descarga" />
-        Descargar CV
+        <img class="h-6" src="/download.svg" alt={t.alt.download} />
+        {t.download}
       </a>
       <div class="flex gap-6">
-        <Github classList="h-8" />
-        <Linkedin classList="h-8" />
-        <Email classList="h-8 w-8" />
+        <Github classList="h-8" altText={t.alt.github} />
+        <Linkedin classList="h-8" altText={t.alt.github} />
+        <Email classList="h-8 w-8" altText={t.alt.github} />
       </div>
     </nav>
   </div>

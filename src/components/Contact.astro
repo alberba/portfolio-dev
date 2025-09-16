@@ -1,14 +1,16 @@
 ---
-import Email from './logosLink/Email.astro';
-import Github from './logosLink/Github.astro';
-import Linkedin from './logosLink/Linkedin.astro';
+import Email from "./logosLink/Email.astro";
+import Github from "./logosLink/Github.astro";
+import Linkedin from "./logosLink/Linkedin.astro";
+
+const { t } = Astro.props;
 ---
 
 <section class="flex flex-col items-center">
-  <div class="m-8 w-1/4 border-b over"></div>
+  <div class="over m-8 w-1/4 border-b"></div>
   <nav class="flex gap-12">
-    <Github classList="h-12" />
-    <Linkedin classList="h-12" />
-    <Email classList="h-12 w-12" />
+    <Github classList="h-12" altText={t.github} />
+    <Linkedin classList="h-12" altText={t.linkedin} />
+    <Email classList="h-12 w-12" altText={t.email} />
   </nav>
 </section>

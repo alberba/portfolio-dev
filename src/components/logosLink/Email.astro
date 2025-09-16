@@ -1,9 +1,9 @@
 ---
-const { classList } = Astro.props;
+const { classList, altText } = Astro.props;
 
 const email = "albertsalomv@proton.me";
 ---
 
 <a href={`mailto:${email}`}>
-  <img class={classList} src="/email.svg" alt="Enviar correo" />
+  <img class={classList} src="/email.svg" alt={altText} />
 </a>
