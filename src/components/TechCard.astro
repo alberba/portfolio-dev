@@ -5,15 +5,19 @@ const { src, alt, name, color } = image;
 
 <div class="group relative">
   <span
-    class="absolute -top-8 left-1/2 -translate-x-1/2 rounded-xl border px-4 py-1 text-center opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-top-10"
-    style= `color: rgb(${color}); border-color: rgb(${color} / 0.4); background-color: rgb(${color} / 0.1);`
+    class="absolute -top-8 left-1/2 -translate-x-1/2 rounded-xl border px-4 py-1 text-center opacity-0 transition-all duration-300 group-hover:-top-10 group-hover:opacity-100"
+    style=`color: rgb(${color}); border-color: rgb(${color} / 0.4); background-color: rgb(${color} / 0.1);`
   >
     {name}
   </span>
-  <img
-    src={src}
-    alt={alt}
-    class=`border-card-border aspect-square h-16 rounded-xl border object-center p-3 transition-all duration-400 hover:p-2.5`
+  <div
+    class="border-card-border group aspect-square h-16 rounded-xl border p-3"
     style=`background: radial-gradient(circle 80px, rgb(${color} / 0.3) 0%, transparent 100%); border-color: rgb(${color} / 0.4);`
-  />
+  >
+    <img
+      src={src}
+      alt={alt}
+      class=`transition-all aspect-square duration-200 group-hover:scale-110`
+    />
+  </div>
 </div>
