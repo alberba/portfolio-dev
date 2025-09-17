@@ -16,4 +16,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  server: {
+    headers: {
+      "Content-Security-Policy":
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'none';",
+    },
+  },
 });
