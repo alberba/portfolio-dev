@@ -15,7 +15,7 @@ strong {
 }
 
 @theme {
-  --color-accent: rgb(239 159 11);
+  --color-accent: #dc7a1e;
   --color-accent-20: rgb(239 159 11 / 0.20);
   --color-accent-10: rgb(239 159 11 / 0.10);
   --color-accent-5: rgb(239 159 11 / 0.05);
