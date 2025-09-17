@@ -35,9 +35,12 @@ const { t } = Astro.props;
         {t.download}
       </a>
       <div class="flex gap-6">
-        <Github classList="h-8" altText={t.alt.github} />
-        <Linkedin classList="h-8" altText={t.alt.github} />
-        <Email classList="h-8 w-8" altText={t.alt.github} />
+        <Github
+          classList="h-8 filter hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.4)] hover:scale-110 transition-all duration-300"
+          altText={t.alt.github}
+        />
+        <Linkedin classList="h-8 filter hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.4)] hover:scale-105 transition-all duration-300" altText={t.alt.linkedin} />
+        <Email classList="h-8 w-8 filter hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.4)] hover:scale-105 transition-all duration-300" altText={t.alt.email} />
       </div>
     </nav>
   </div>
