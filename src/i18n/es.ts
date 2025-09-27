@@ -34,6 +34,14 @@ export default {
         Desarrollada con HTML, CSS y Javascript durante el transcurso de la carrera 
         universitaria.`,
       },
+      fileConverter: {
+        title: "File Converter",
+        url: "https://file-converter-alberba.vercel.app/",
+        development: true,
+        imageUrl: "/projects/fileconverter.webp",
+        description: `Una aplicación web para convertir archivos entre diferentes formatos.
+        Desarrollada con React, TypeScript y TailwindCSS. Actualmente solo permite imágenes.`,
+      },
       fluxComfyUI: {
         title: "Flux ComfyUI UI",
         url: "https://github.com/alberba/astro-flux-comfyui",
@@ -42,14 +50,6 @@ export default {
         description: `Una plataforma para poder gestionar flujos de trabajo de comfyui con una interfaz
         sencilla y moderna. Proyecto realizado con Astro, TailwindCSS y Typescript para el
         desarrollo del TFG. Página web no funcional.`,
-      },
-      fileConverter: {
-        title: "File Converter",
-        url: "https://file-converter-alberba.vercel.app/",
-        development: true,
-        imageUrl: "/projects/fileconverter.webp",
-        description: `Una aplicación web para convertir archivos entre diferentes formatos.
-        Desarrollada con React, TypeScript y TailwindCSS. Actualmente solo permite imágenes.`,
       },
     },
   },
