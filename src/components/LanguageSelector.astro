@@ -1,0 +1,56 @@
+---
+const currentLang = Astro.url.pathname.startsWith("/en") ? "en" : "es";
+
+const langs = [
+  { code: "es", icon: "/lang/es.svg", path: "/", altImage: "Español" },
+  { code: "en", icon: "/lang/en.svg", path: "/en", altImage: "Inglés" },
+];
+
+const currentLangObj = langs.find((lang) => lang.code === currentLang);
+---
+
+<div>
+  <div class="absolute right-8 hidden gap-3 sm:flex">
+    {
+      langs.map((lang) => {
+        return (
+          <a href={lang.path}>
+            <img
+              class="h-8 rounded-full border-2 border-transparent p-0.5 hover:border-white"
+              src={lang.icon}
+              alt={lang.altImage}
+            />
+          </a>
+        );
+      })
+    }
+  </div>
+  <div
+    class="group absolute top-3.5 right-3 flex h-19 items-start rounded-xl px-1 py-0.5 transition-colors focus-within:bg-accent sm:hidden"
+    tabindex="0"
+  >
+    <img
+      class="relative z-1 h-8 rounded-full p-0.5"
+      src={currentLangObj!.icon}
+      alt={currentLangObj!.altImage}
+    />
+    {
+      langs
+        .filter((lang) => lang.code !== currentLang)
+        .map((lang) => {
+          return (
+            <a
+              class="absolute top-0.5 z-0 opacity-0 transition-all group-focus-within:translate-y-9 group-focus-within:opacity-100"
+              href={lang.path}
+            >
+              <img
+                class="h-8 rounded-full p-0.5"
+                src={lang.icon}
+                alt={lang.altImage}
+              />
+            </a>
+          );
+        })
+    }
+  </div>
+</div>
