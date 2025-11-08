@@ -1,0 +1,106 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import es from "../i18n/es";
+
+const t = es;
+
+const { lang, frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Portfolio de Alberba — desarrollador web full-stack. Aquí encontrarás su biografía, stack técnico (frameworks, herramientas), proyectos destacados con demos y cómo contactarlo para colaboraciones"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta property="og:title" content="alberba - Portfolio Dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alberba-dev.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://alberba-dev.vercel.app/og_image.webp"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio de Alberba — desarrollador web full-stack. Aquí encontrarás su biografía, stack técnico (frameworks, herramientas), proyectos destacados con demos y cómo contactarlo para colaboraciones"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="alberba - Portfolio Dev" />
+    <meta
+      name="twitter:description"
+      content="Portfolio de Alberba — desarrollador web full-stack. Aquí encontrarás su biografía, stack técnico (frameworks, herramientas), proyectos destacados con demos y cómo contactarlo para colaboraciones"
+    />
+    <meta
+      name="twitter:image"
+      content="https://alberba-dev.vercel.app/og_image.webp"
+    />
+    <meta property="og:locale" content="es_ES" />
+
+    <title>alberba - Portfolio Dev</title>
+  </head>
+  <body>
+    <Header t={t} />
+    <main
+      class="mx-6 flex max-w-4xl flex-1 flex-col gap-12 sm:mx-8 md:mx-16 md:gap-16 lg:mx-auto"
+    >
+      <article class="flex max-w-3xl flex-col gap-8 bg-[#72757e25] p-8 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold">{frontmatter.title}</h1>
+        <div class="flex h-92 w-full justify-center">
+          <img class="h-full object-contain shadow-lg" src={frontmatter.image} />
+        </div>
+        <slot />
+      </article>
+    </main>
+    <Footer t={t.contact} />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    background:
+      radial-gradient(
+        ellipse 500px 300px at 50% 18%,
+        var(--color-accent-20) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 200px 180px at 20% 50%,
+        var(--color-accent-10) -40%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 300px 300px at 90% 60%,
+        var(--color-accent-5) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        ellipse 1000px 400px at 50% 95%,
+        var(--color-accent-10) 40%,
+        transparent 100%
+      ),
+      var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    color: #94a1b2;
+    font-family: system-ui, sans-serif;
+    scrollbar-width: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    min-height: 100vh;
+  }
+</style>
