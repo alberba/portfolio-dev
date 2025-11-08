@@ -1,14 +1,15 @@
 ---
 import LanguageSelector from "./LanguageSelector.astro";
 
-const { t } = Astro.props;
+const { t, lang } = Astro.props;
+const basePath = lang === "en" ? "/en" : "/";
 ---
 
 <header class="text-text-primary flex items-center justify-center p-4">
   <nav class="flex gap-8 text-xl font-medium md:gap-12">
-    <a href="#about-me">{t.about.title}</a>
-    <a href="#tech-section">Stack</a>
-    <a href="#projects-section">{t.projects.title}</a>
+    <a href={`${basePath}#about-me`}>{t.about.title}</a>
+    <a href={`${basePath}#tech-section`}>Stack</a>
+    <a href={`${basePath}#projects-section`}>{t.projects.title}</a>
   </nav>
   <LanguageSelector />
 </header>
