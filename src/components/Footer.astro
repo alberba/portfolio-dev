@@ -1,0 +1,25 @@
+---
+import Email from "./logosLink/Email.astro";
+import Github from "./logosLink/Github.astro";
+import Linkedin from "./logosLink/Linkedin.astro";
+
+const { t } = Astro.props;
+---
+
+<footer class="mb-4 flex flex-col items-center">
+  <div class="over m-8 w-1/4 border-b"></div>
+  <nav class="flex gap-12">
+    <Github
+      classList="h-10 filter hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)] hover:scale-110 transition-all duration-300"
+      altText={t.github}
+    />
+    <Linkedin
+      classList="h-10 filter hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)] hover:scale-110 transition-all duration-300"
+      altText={t.linkedin}
+    />
+    <Email
+      classList="h-10 w-10 filter hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)] hover:scale-110 transition-all duration-300"
+      altText={t.email}
+    />
+  </nav>
+</footer>
